@@ -1,12 +1,12 @@
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
-require('dotenv').config(); // For environment variables
+require('dotenv').config(); 
 
 const app = express();
 const server = http.createServer(app);
 
-// Use PORT from environment variables or default to 3001
+
 const PORT = process.env.PORT || 3001;
 
 const io = socketIo(server, {
