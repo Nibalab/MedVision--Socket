@@ -11,8 +11,9 @@ const PORT = process.env.PORT || 3001;
 
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000", // Allow only your React app
+    origin: ["http://localhost:3000", "http://192.168.16.110:3000"],
     methods: ["GET", "POST"], // Allowed methods
+    credentials: true
   },
 });
 
